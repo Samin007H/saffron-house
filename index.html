@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saffron House & Co</title>
+  <!-- Classy fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- HEADER (hamburger + cart) -->
+  <header>
+    <div class="top-bar">
+      <button class="linklike" data-open="contact-modal">Contact Us</button>
+      <button class="linklike" data-open="faq-modal">FAQ</button>
+      <button
+        id="cart-button"
+        class="cart-link"
+        data-open="cart-modal"
+        aria-label="Cart"
+      >
+        Cart 🛒 <span id="cart-badge">0</span>
+      </button>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html" class="brand">Saffron House & Co</a>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">☰</button>
+      <div id="primary-menu" class="menu">
+        <ul>
+          <li><a class="active" href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./recipes.html">Recipes</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO (works with your three images if present) -->
+  <section class="hero-slider" aria-label="Saffron showcase">
+    <div class="slide active" data-bg="images/saffron1.jpg"></div>
+    <div class="slide"        data-bg="images/saffron2.jpg"></div>
+    <div class="slide"        data-bg="images/saffron3.jpg"></div>
+
+    <div class="hero-overlay">
+      <h1>Your Saffron Journey</h1>
+      <p>Begins Here</p>
+      <a href="./products.html" class="cta-btn">Shop Now</a>
+    </div>
+
+    <div class="dots" role="tablist" aria-label="Slide selector">
+      <button class="dot active" aria-label="Slide 1" aria-selected="true"></button>
+      <button class="dot" aria-label="Slide 2"></button>
+      <button class="dot" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- CART MODAL -->
+  <div class="modal" id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2 id="cart-title">Your Cart</h2>
+      <div id="cart-contents"></div>
+      <div class="cart-summary">
+        <span>Total:</span><strong id="cart-total">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="cart-clear" class="outline-btn">Clear</button>
+        <a href="#" class="cta-btn">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-title" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2 id="contact-title">Contact Saffron House & Co</h2>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> hello@saffronhouse.co</li>
+        <li><strong>Phone:</strong> +61 3 5555 1234</li>
+        <li><strong>Address:</strong> 12 Spice Lane, Melbourne VIC 3000</li>
+      </ul>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! We will get back to you.');">
+        <label>Name <input type="text" required /></label>
+        <label>Email <input type="email" required /></label>
+        <label>Message <textarea rows="4" required></textarea></label>
+        <button class="cta-btn" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAQ MODAL -->
+  <div class="modal" id="faq-modal" role="dialog" aria-modal="true" aria-labelledby="faq-title" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2 id="faq-title">Frequently Asked Questions</h2>
+      <div class="accordion">
+        <button class="acc-btn">What makes your saffron premium?</button>
+        <div class="acc-panel">Grade I threads, hand-picked and lab-tested for crocin, safranal and picrocrocin.</div>
+
+        <button class="acc-btn">How should I store saffron?</button>
+        <div class="acc-panel">Airtight, cool, and away from light. Use within 24 months for peak flavor.</div>
+
+        <button class="acc-btn">Shipping &amp; returns</button>
+        <div class="acc-panel">We ship worldwide in 24–48h. Contact us within 14 days for replacement or refund.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Saffron House &amp; Co. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

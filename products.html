@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Products | Saffron House & Co</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <button class="linklike" data-open="contact-modal">Contact Us</button>
+      <button class="linklike" data-open="faq-modal">FAQ</button>
+      <button
+        id="cart-button"
+        class="cart-link"
+        data-open="cart-modal"
+      >
+        Cart 🛒 <span id="cart-badge">0</span>
+      </button>
+    </div>
+    <nav class="navbar">
+      <div class="logo"><a href="./index.html" class="brand">Saffron House & Co</a></div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">☰</button>
+      <div id="primary-menu" class="menu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a class="active" href="./products.html">Products</a></li>
+          <li><a href="./recipes.html">Recipes</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="product-section container">
+    <h1>Our Premium Saffron</h1>
+    <div class="product-card luxe">
+      <div class="product-hero">
+        <div class="glass-pill">Grade I • Lab-tested</div>
+        <div class="hero-badge">100% Pure Threads</div>
+        <!-- Decorative hero block (no image required) -->
+        <div class="hero-saffron-shape"></div>
+      </div>
+      <div class="product-info">
+        <h2>Grade I Kashmiri Saffron — 1g</h2>
+        <p>
+          Hand-picked in Pampore and curated by our founders, this saffron delivers deep crimson color,
+          warm floral aroma, and unmistakable flavor. Perfect for desserts, biryanis, tea and wellness tonics.
+        </p>
+        <ul class="bullets">
+          <li>Crocin ≥ 200 • Safranal high • Picrocrocin rich</li>
+          <li>Fresh small batches • Airtight UV-protected glass jar</li>
+          <li>Traceable sourcing • Fair to farms</li>
+        </ul>
+        <p class="price">$19.99 / 1g</p>
+        <button
+          class="cta-btn"
+          data-add-to-cart
+          data-id="saffron-1"
+          data-name="Grade I Kashmiri Saffron (1g)"
+          data-price="19.99"
+          data-img=""
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CART MODAL + CONTACT/FAQ (shared UI) -->
+  <div class="modal" id="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2 id="cart-title">Your Cart</h2>
+      <div id="cart-contents"></div>
+      <div class="cart-summary">
+        <span>Total:</span><strong id="cart-total">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="cart-clear" class="outline-btn">Clear</button>
+        <a href="#" class="cta-btn">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="contact-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Contact</h2>
+      <p>hello@saffronhouse.co</p>
+    </div>
+  </div>
+
+  <div class="modal" id="faq-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>FAQ</h2>
+      <p>Premium, fresh, traceable.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Saffron House &amp; Co. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
