@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipes | Saffron House & Co</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <button class="linklike" data-open="contact-modal">Contact Us</button>
+      <button class="linklike" data-open="faq-modal">FAQ</button>
+      <button
+        id="cart-button"
+        class="cart-link"
+        data-open="cart-modal"
+      >
+        Cart 🛒 <span id="cart-badge">0</span>
+      </button>
+    </div>
+    <nav class="navbar">
+      <div class="logo"><a href="./index.html" class="brand">Saffron House & Co</a></div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">☰</button>
+      <div id="primary-menu" class="menu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a class="active" href="./recipes.html">Recipes</a></li>
+          <li><a href="./about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="recipes-section container">
+    <h1>Saffron Recipes</h1>
+    <p class="subtle">Bloom a pinch of saffron in warm milk or water for 10 minutes to unlock peak color &amp; aroma.</p>
+
+    <!-- Innovative, image-free recipe grid -->
+    <div class="recipes-grid no-img">
+      <a class="recipe-card" href="#" data-recipe="milk">
+        <div class="icon-pill">🥛</div>
+        <h3>Kesar Doodh (Saffron Milk)</h3>
+        <p>Comforting bedtime drink with cardamom &amp; almonds.</p>
+        <span class="meta">10 min • Easy</span>
+      </a>
+
+      <a class="recipe-card" href="#" data-recipe="rice">
+        <div class="icon-pill">🍚</div>
+        <h3>Saffron Rice</h3>
+        <p>Fragrant basmati with butter and gentle spices.</p>
+        <span class="meta">25 min • Easy</span>
+      </a>
+
+      <a class="recipe-card" href="#" data-recipe="risotto">
+        <div class="icon-pill">🧀</div>
+        <h3>Risotto alla Milanese</h3>
+        <p>Silky Italian classic with parmesan &amp; white wine.</p>
+        <span class="meta">35 min • Medium</span>
+      </a>
+
+      <a class="recipe-card" href="#" data-recipe="tea">
+        <div class="icon-pill">🍵</div>
+        <h3>Saffron Tea</h3>
+        <p>Light herbal tea with honey &amp; lemon zest.</p>
+        <span class="meta">8 min • Easy</span>
+      </a>
+
+      <a class="recipe-card" href="#" data-recipe="icecream">
+        <div class="icon-pill">🍨</div>
+        <h3>Kesar Pistachio Ice Cream</h3>
+        <p>Rich kulfi vibes with pistachios.</p>
+        <span class="meta">4 h • Medium</span>
+      </a>
+
+      <a class="recipe-card" href="#" data-recipe="biriyani">
+        <div class="icon-pill">🍗</div>
+        <h3>Saffron Chicken Biryani</h3>
+        <p>Layered basmati, chicken, saffron &amp; fried onions.</p>
+        <span class="meta">60 min • Advanced</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Recipe details modal -->
+  <div class="modal" id="recipe-modal" role="dialog" aria-modal="true" aria-labelledby="recipe-title" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2 id="recipe-title">Recipe</h2>
+      <div id="recipe-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart + Contact/FAQ (compact) -->
+  <div class="modal" id="cart-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Your Cart</h2>
+      <div id="cart-contents"></div>
+      <div class="cart-summary">
+        <span>Total:</span><strong id="cart-total">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="cart-clear" class="outline-btn">Clear</button>
+        <a href="#" class="cta-btn">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="contact-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Contact</h2>
+      <p>hello@saffronhouse.co</p>
+    </div>
+  </div>
+
+  <div class="modal" id="faq-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>FAQ</h2>
+      <p>Premium, fresh, traceable.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Saffron House &amp; Co. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

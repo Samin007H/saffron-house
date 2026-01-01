@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Saffron House & Co</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <button class="linklike" data-open="contact-modal">Contact Us</button>
+      <button class="linklike" data-open="faq-modal">FAQ</button>
+      <button
+        id="cart-button"
+        class="cart-link"
+        data-open="cart-modal"
+      >
+        Cart 🛒 <span id="cart-badge">0</span>
+      </button>
+    </div>
+    <nav class="navbar">
+      <div class="logo"><a href="./index.html" class="brand">Saffron House & Co</a></div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Toggle menu">☰</button>
+      <div id="primary-menu" class="menu">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./products.html">Products</a></li>
+          <li><a href="./recipes.html">Recipes</a></li>
+          <li><a class="active" href="./about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about-section container">
+    <h1>Our Story</h1>
+    <p class="lead">
+      Saffron House &amp; Co was founded by <strong>Samin Hossain</strong> and <strong>Tabish Ali</strong> to bring
+      uncompromising saffron to kitchens worldwide.
+    </p>
+
+    <!-- Elegant dual founder cards without images -->
+    <div class="bio-grid">
+      <article class="bio-card luxe">
+        <div class="avatar-pill">SH</div>
+        <h3>Samin Hossain — Sourcing &amp; Quality</h3>
+        <p>
+          Samin leads sourcing, lab partnerships, and chef collaborations. He has built a transparent supply
+          network that certifies every batch for crocin (color), safranal (aroma), and picrocrocin (flavor).
+          His ethos is simple: <em>traceability from farm to table</em>.
+        </p>
+        <ul class="bullets">
+          <li>Direct farm relationships</li>
+          <li>Independent lab testing</li>
+          <li>Small-batch freshness</li>
+        </ul>
+      </article>
+
+      <article class="bio-card luxe">
+        <div class="avatar-pill">TA</div>
+        <h3>Tabish Ali — Heritage &amp; Craft</h3>
+        <p>
+          Born in Kashmir, Tabish brings a lifetime of saffron heritage. He has worked with growers in Pampore
+          and supported buyers and home cooks worldwide, teaching the craft of blooming saffron for maximum
+          color and aroma. His mission: share authentic Kashmiri saffron with the world.
+        </p>
+        <ul class="bullets">
+          <li>Kashmiri roots &amp; expertise</li>
+          <li>Global saffron education</li>
+          <li>Flavor-first philosophy</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Milestones line -->
+    <div class="timeline">
+      <div class="tick"><span>2018</span> First farm partners</div>
+      <div class="tick"><span>2020</span> Lab certification program</div>
+      <div class="tick"><span>2023</span> Global shipping</div>
+      <div class="tick"><span>2025</span> Saffron House &amp; Co</div>
+    </div>
+
+    <p class="center">We curate small-batch, lab-tested saffron and share recipes, brewing guides, and storage tips so you enjoy saffron the way it’s meant to be.</p>
+  </section>
+
+  <!-- Cart + Contact/FAQ (compact) -->
+  <div class="modal" id="cart-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Your Cart</h2>
+      <div id="cart-contents"></div>
+      <div class="cart-summary">
+        <span>Total:</span><strong id="cart-total">$0.00</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="cart-clear" class="outline-btn">Clear</button>
+        <a href="#" class="cta-btn">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="contact-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>Contact</h2>
+      <p>hello@saffronhouse.co</p>
+    </div>
+  </div>
+
+  <div class="modal" id="faq-modal" hidden>
+    <div class="modal__card">
+      <button class="modal__close" data-close>&times;</button>
+      <h2>FAQ</h2>
+      <p>Premium, fresh, traceable.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Saffron House &amp; Co. All Rights Reserved.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
